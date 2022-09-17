@@ -1,0 +1,57 @@
+New keyword dynamically allocates the memory at run time and returns the reference to it, and ref is stored in variable.
+
+object are stored in heap memory, and reference variable stored in stack
+reference points to object
+All class object in java are allocated dynamically
+
+Dynamically memory allocation -
+Student student = new Student();
+----------------< happens at compile time()
+                 -----------------< happens at run time
+
+student is the reference variable that holds the memory address of object in teh heap
+accessing the address is not allowed in java
+
+When you create an object of a class, it means the class is instantiated
+
+the default value of object is null
+the default value of primitives like int is 0, boolean is false
+
+Student() < is a constructor
+constructor defines what happens when an object is created
+constructor is used to instantiate the variable of the object
+constructor is a special function that runs when you create an object and it allocates some variables
+
+default constructor Student()
+to bind the argument with the object we define custom constructor(constructor overloading)
+Student(13,"Ganeshji")
+
+
+this keyword is used to access the object inside the template(class)
+this is replaced with reference variable/current object
+
+to call a constructor from a constructor, use this
+like: Student(){
+    this(15,"Ganeshji")
+}
+Student(int rno, String name) {}
+
+
+In java primitive are not implemented as object and are not stored in heap memory and re stored in stack memory
+
+Wrapper class:
+used to convert a primitive datatype to an Object
+
+when you pass object as argument, reference is passed
+
+Final:
+final variable has to be initialized when declared, as you can not modify it.
+final guarantee immutability only when instance variable are primitive datatype
+when a non primitive is final, we can reassign the instance variable but not the non primitive object
+
+Finalize:
+java will not allow you to destroy an object manually but it gives you the option to perform some action when it destroys the object
+finalize keyword is used to specify what to do when the object is destroyed/reclaimed by garbage collector
+finalize is used to specify the specific actions when the object is about to be taken away by garbage collector
+finalize is called when java do a garbage collection
+finalize at class level means that whenevr any object of that class is destroyed in memory by garbage collector, steps defined in finallize menthod will be performed.
